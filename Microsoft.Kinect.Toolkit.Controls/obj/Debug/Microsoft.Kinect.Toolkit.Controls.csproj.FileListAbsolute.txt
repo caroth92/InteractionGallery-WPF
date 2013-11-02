@@ -1,0 +1,36 @@
+C:\Users\DeLaTorre\Documents\Visual Studio 2012\Projects\InteractionGallery-WPF\InteractionGallery-WPF\.Debug\KinectInteraction170_32.dll
+C:\Users\DeLaTorre\Documents\Visual Studio 2012\Projects\InteractionGallery-WPF\InteractionGallery-WPF\.Debug\KinectInteraction170_64.dll
+C:\Users\DeLaTorre\Documents\Visual Studio 2012\Projects\InteractionGallery-WPF\InteractionGallery-WPF\.Debug\Microsoft.Kinect.Toolkit.Controls.dll
+C:\Users\DeLaTorre\Documents\Visual Studio 2012\Projects\InteractionGallery-WPF\InteractionGallery-WPF\.Debug\Microsoft.Kinect.Toolkit.Controls.pdb
+C:\Users\DeLaTorre\Documents\Visual Studio 2012\Projects\InteractionGallery-WPF\Microsoft.Kinect.Toolkit.Controls\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\DeLaTorre\Documents\Visual Studio 2012\Projects\InteractionGallery-WPF\Microsoft.Kinect.Toolkit.Controls\obj\Debug\Microsoft.Kinect.Toolkit.Controls_MarkupCompile.cache
+C:\Users\DeLaTorre\Documents\Visual Studio 2012\Projects\InteractionGallery-WPF\Microsoft.Kinect.Toolkit.Controls\obj\Debug\Microsoft.Kinect.Toolkit.Controls_MarkupCompile.lref
+C:\Users\DeLaTorre\Documents\Visual Studio 2012\Projects\InteractionGallery-WPF\Microsoft.Kinect.Toolkit.Controls\obj\Debug\Themes\Generic.baml
+C:\Users\DeLaTorre\Documents\Visual Studio 2012\Projects\InteractionGallery-WPF\Microsoft.Kinect.Toolkit.Controls\obj\Debug\Microsoft.Kinect.Toolkit.Controls.g.resources
+C:\Users\DeLaTorre\Documents\Visual Studio 2012\Projects\InteractionGallery-WPF\Microsoft.Kinect.Toolkit.Controls\obj\Debug\Microsoft.Kinect.Toolkit.Controls.dll
+C:\Users\DeLaTorre\Documents\Visual Studio 2012\Projects\InteractionGallery-WPF\Microsoft.Kinect.Toolkit.Controls\obj\Debug\Microsoft.Kinect.Toolkit.Controls.pdb
+C:\Users\DeLaTorre\Documents\Visual Studio 2012\Projects\InteractionGallery-WPF\Microsoft.Kinect.Toolkit.Controls\obj\Debug\Microsoft.Kinect.Toolkit.Controls.csprojResolveAssemblyReference.cache
+C:\Users\Martha\Desktop\InteractionGallery-WPF\InteractionGallery-WPF\.Debug\KinectInteraction170_32.dll
+C:\Users\Martha\Desktop\InteractionGallery-WPF\InteractionGallery-WPF\.Debug\KinectInteraction170_64.dll
+C:\Users\Martha\Desktop\InteractionGallery-WPF\InteractionGallery-WPF\.Debug\Microsoft.Kinect.Toolkit.Controls.dll
+C:\Users\Martha\Desktop\InteractionGallery-WPF\InteractionGallery-WPF\.Debug\Microsoft.Kinect.Toolkit.Controls.pdb
+C:\Users\Martha\Desktop\InteractionGallery-WPF\Microsoft.Kinect.Toolkit.Controls\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\Martha\Desktop\InteractionGallery-WPF\Microsoft.Kinect.Toolkit.Controls\obj\Debug\Microsoft.Kinect.Toolkit.Controls_MarkupCompile.cache
+C:\Users\Martha\Desktop\InteractionGallery-WPF\Microsoft.Kinect.Toolkit.Controls\obj\Debug\Microsoft.Kinect.Toolkit.Controls_MarkupCompile.lref
+C:\Users\Martha\Desktop\InteractionGallery-WPF\Microsoft.Kinect.Toolkit.Controls\obj\Debug\Themes\Generic.baml
+C:\Users\Martha\Desktop\InteractionGallery-WPF\Microsoft.Kinect.Toolkit.Controls\obj\Debug\Microsoft.Kinect.Toolkit.Controls.g.resources
+C:\Users\Martha\Desktop\InteractionGallery-WPF\Microsoft.Kinect.Toolkit.Controls\obj\Debug\Microsoft.Kinect.Toolkit.Controls.dll
+C:\Users\Martha\Desktop\InteractionGallery-WPF\Microsoft.Kinect.Toolkit.Controls\obj\Debug\Microsoft.Kinect.Toolkit.Controls.pdb
+C:\Users\Martha\Desktop\InteractionGallery-WPF\Microsoft.Kinect.Toolkit.Controls\obj\Debug\Microsoft.Kinect.Toolkit.Controls.csprojResolveAssemblyReference.cache
+F:\InteractionGallery-WPF\InteractionGallery-WPF\.Debug\KinectInteraction170_32.dll
+F:\InteractionGallery-WPF\InteractionGallery-WPF\.Debug\KinectInteraction170_64.dll
+F:\InteractionGallery-WPF\InteractionGallery-WPF\.Debug\Microsoft.Kinect.Toolkit.Controls.dll
+F:\InteractionGallery-WPF\InteractionGallery-WPF\.Debug\Microsoft.Kinect.Toolkit.Controls.pdb
+F:\InteractionGallery-WPF\Microsoft.Kinect.Toolkit.Controls\obj\Debug\Microsoft.Kinect.Toolkit.Controls.csprojResolveAssemblyReference.cache
+F:\InteractionGallery-WPF\Microsoft.Kinect.Toolkit.Controls\obj\Debug\GeneratedInternalTypeHelper.g.cs
+F:\InteractionGallery-WPF\Microsoft.Kinect.Toolkit.Controls\obj\Debug\Microsoft.Kinect.Toolkit.Controls_MarkupCompile.cache
+F:\InteractionGallery-WPF\Microsoft.Kinect.Toolkit.Controls\obj\Debug\Microsoft.Kinect.Toolkit.Controls_MarkupCompile.lref
+F:\InteractionGallery-WPF\Microsoft.Kinect.Toolkit.Controls\obj\Debug\Themes\Generic.baml
+F:\InteractionGallery-WPF\Microsoft.Kinect.Toolkit.Controls\obj\Debug\Microsoft.Kinect.Toolkit.Controls.g.resources
+F:\InteractionGallery-WPF\Microsoft.Kinect.Toolkit.Controls\obj\Debug\Microsoft.Kinect.Toolkit.Controls.dll
+F:\InteractionGallery-WPF\Microsoft.Kinect.Toolkit.Controls\obj\Debug\Microsoft.Kinect.Toolkit.Controls.pdb

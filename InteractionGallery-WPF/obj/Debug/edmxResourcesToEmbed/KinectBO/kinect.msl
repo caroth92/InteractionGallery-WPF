@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="kinectModelStoreContainer" CdmEntityContainer="kinectEntities">
+    <EntitySetMapping Name="album">
+      <EntityTypeMapping TypeName="kinectModel.album">
+        <MappingFragment StoreEntitySet="album">
+          <ScalarProperty Name="idAlbum" ColumnName="idAlbum" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="fechaLanzamiento" ColumnName="fechaLanzamiento" />
+          <ScalarProperty Name="idGenero" ColumnName="idGenero" />
+          <ScalarProperty Name="idDisquera" ColumnName="idDisquera" />
+          <ScalarProperty Name="cover" ColumnName="cover" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="artista">
+      <EntityTypeMapping TypeName="kinectModel.artista">
+        <MappingFragment StoreEntitySet="artista">
+          <ScalarProperty Name="idArtista" ColumnName="idArtista" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="picture" ColumnName="picture" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="canciones">
+      <EntityTypeMapping TypeName="kinectModel.canciones">
+        <MappingFragment StoreEntitySet="canciones">
+          <ScalarProperty Name="idCancion" ColumnName="idCancion" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="idAlbum" ColumnName="idAlbum" />
+          <ScalarProperty Name="idArtista" ColumnName="idArtista" />
+          <ScalarProperty Name="claveAudio" ColumnName="claveAudio" />
+          <ScalarProperty Name="claveVideo" ColumnName="claveVideo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="disquera">
+      <EntityTypeMapping TypeName="kinectModel.disquera">
+        <MappingFragment StoreEntitySet="disquera">
+          <ScalarProperty Name="idDisquera" ColumnName="idDisquera" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="genero">
+      <EntityTypeMapping TypeName="kinectModel.genero">
+        <MappingFragment StoreEntitySet="genero">
+          <ScalarProperty Name="idGenero" ColumnName="idGenero" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="rating">
+      <EntityTypeMapping TypeName="kinectModel.rating">
+        <MappingFragment StoreEntitySet="rating">
+          <ScalarProperty Name="idRating" ColumnName="idRating" />
+          <ScalarProperty Name="idCancion" ColumnName="idCancion" />
+          <ScalarProperty Name="likes" ColumnName="likes" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

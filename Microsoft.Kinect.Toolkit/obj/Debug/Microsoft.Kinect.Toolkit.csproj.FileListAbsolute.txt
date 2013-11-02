@@ -1,0 +1,26 @@
+C:\Users\DeLaTorre\Documents\Visual Studio 2012\Projects\InteractionGallery-WPF\Microsoft.Kinect.Toolkit\bin\Debug\Microsoft.Kinect.Toolkit.dll
+C:\Users\DeLaTorre\Documents\Visual Studio 2012\Projects\InteractionGallery-WPF\Microsoft.Kinect.Toolkit\bin\Debug\Microsoft.Kinect.Toolkit.pdb
+C:\Users\DeLaTorre\Documents\Visual Studio 2012\Projects\InteractionGallery-WPF\Microsoft.Kinect.Toolkit\bin\Debug\Microsoft.Kinect.Toolkit.dll.CodeAnalysisLog.xml
+C:\Users\DeLaTorre\Documents\Visual Studio 2012\Projects\InteractionGallery-WPF\Microsoft.Kinect.Toolkit\bin\Debug\Microsoft.Kinect.Toolkit.dll.lastcodeanalysissucceeded
+C:\Users\DeLaTorre\Documents\Visual Studio 2012\Projects\InteractionGallery-WPF\Microsoft.Kinect.Toolkit\obj\Debug\KinectSensorChooserUI.baml
+C:\Users\DeLaTorre\Documents\Visual Studio 2012\Projects\InteractionGallery-WPF\Microsoft.Kinect.Toolkit\obj\Debug\KinectSensorChooserUI.g.cs
+C:\Users\DeLaTorre\Documents\Visual Studio 2012\Projects\InteractionGallery-WPF\Microsoft.Kinect.Toolkit\obj\Debug\Microsoft.Kinect.Toolkit_MarkupCompile.cache
+C:\Users\DeLaTorre\Documents\Visual Studio 2012\Projects\InteractionGallery-WPF\Microsoft.Kinect.Toolkit\obj\Debug\Microsoft.Kinect.Toolkit.g.resources
+C:\Users\DeLaTorre\Documents\Visual Studio 2012\Projects\InteractionGallery-WPF\Microsoft.Kinect.Toolkit\obj\Debug\Microsoft.Kinect.Toolkit.Properties.Resources.resources
+C:\Users\DeLaTorre\Documents\Visual Studio 2012\Projects\InteractionGallery-WPF\Microsoft.Kinect.Toolkit\obj\Debug\Microsoft.Kinect.Toolkit.csproj.GenerateResource.Cache
+C:\Users\DeLaTorre\Documents\Visual Studio 2012\Projects\InteractionGallery-WPF\Microsoft.Kinect.Toolkit\obj\Debug\Microsoft.Kinect.Toolkit.dll
+C:\Users\DeLaTorre\Documents\Visual Studio 2012\Projects\InteractionGallery-WPF\Microsoft.Kinect.Toolkit\obj\Debug\Microsoft.Kinect.Toolkit.pdb
+C:\Users\DeLaTorre\Documents\Visual Studio 2012\Projects\InteractionGallery-WPF\Microsoft.Kinect.Toolkit\obj\Debug\Microsoft.Kinect.Toolkit.csprojResolveAssemblyReference.cache
+C:\Users\Martha\Desktop\InteractionGallery-WPF\Microsoft.Kinect.Toolkit\bin\Debug\Microsoft.Kinect.Toolkit.dll
+C:\Users\Martha\Desktop\InteractionGallery-WPF\Microsoft.Kinect.Toolkit\bin\Debug\Microsoft.Kinect.Toolkit.pdb
+C:\Users\Martha\Desktop\InteractionGallery-WPF\Microsoft.Kinect.Toolkit\bin\Debug\Microsoft.Kinect.Toolkit.dll.CodeAnalysisLog.xml
+C:\Users\Martha\Desktop\InteractionGallery-WPF\Microsoft.Kinect.Toolkit\bin\Debug\Microsoft.Kinect.Toolkit.dll.lastcodeanalysissucceeded
+C:\Users\Martha\Desktop\InteractionGallery-WPF\Microsoft.Kinect.Toolkit\obj\Debug\Microsoft.Kinect.Toolkit.csprojResolveAssemblyReference.cache
+C:\Users\Martha\Desktop\InteractionGallery-WPF\Microsoft.Kinect.Toolkit\obj\Debug\KinectSensorChooserUI.baml
+C:\Users\Martha\Desktop\InteractionGallery-WPF\Microsoft.Kinect.Toolkit\obj\Debug\KinectSensorChooserUI.g.cs
+C:\Users\Martha\Desktop\InteractionGallery-WPF\Microsoft.Kinect.Toolkit\obj\Debug\Microsoft.Kinect.Toolkit_MarkupCompile.cache
+C:\Users\Martha\Desktop\InteractionGallery-WPF\Microsoft.Kinect.Toolkit\obj\Debug\Microsoft.Kinect.Toolkit.g.resources
+C:\Users\Martha\Desktop\InteractionGallery-WPF\Microsoft.Kinect.Toolkit\obj\Debug\Microsoft.Kinect.Toolkit.Properties.Resources.resources
+C:\Users\Martha\Desktop\InteractionGallery-WPF\Microsoft.Kinect.Toolkit\obj\Debug\Microsoft.Kinect.Toolkit.csproj.GenerateResource.Cache
+C:\Users\Martha\Desktop\InteractionGallery-WPF\Microsoft.Kinect.Toolkit\obj\Debug\Microsoft.Kinect.Toolkit.dll
+C:\Users\Martha\Desktop\InteractionGallery-WPF\Microsoft.Kinect.Toolkit\obj\Debug\Microsoft.Kinect.Toolkit.pdb

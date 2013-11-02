@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="f5e7ccd6275a44cab92bb4619664c38a" Name="Diagram1">
+        <EntityTypeShape EntityType="kinectModel.album" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="kinectModel.artista" Width="1.5" PointX="3" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="kinectModel.canciones" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="kinectModel.disquera" Width="1.5" PointX="0.75" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="kinectModel.genero" Width="1.5" PointX="0.75" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="kinectModel.rating" Width="1.5" PointX="7.5" PointY="1.5" IsExpanded="true" />
+        <AssociationConnector Association="kinectModel.FK__album__idDisquer__0DAF0CB0" ManuallyRouted="false" />
+        <AssociationConnector Association="kinectModel.FK__album__idGenero__0CBAE877" ManuallyRouted="false" />
+        <AssociationConnector Association="kinectModel.FK__canciones__idAlb__1920BF5C" ManuallyRouted="false" />
+        <AssociationConnector Association="kinectModel.FK__canciones__idArt__1A14E395" ManuallyRouted="false" />
+        <AssociationConnector Association="kinectModel.FK__rating__idCancio__29572725" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
