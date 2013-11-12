@@ -17,6 +17,7 @@ namespace Microsoft.Samples.Kinect.InteractionGallery.KinectBO
         public artista()
         {
             this.canciones = new HashSet<canciones>();
+            this.album = new HashSet<album>();
         }
     
         public int idArtista { get; set; }
@@ -24,5 +25,6 @@ namespace Microsoft.Samples.Kinect.InteractionGallery.KinectBO
         public string picture { get; set; }
     
         public virtual ICollection<canciones> canciones { get; set; }
+        public virtual ICollection<album> album { get; set; }
     }
 }

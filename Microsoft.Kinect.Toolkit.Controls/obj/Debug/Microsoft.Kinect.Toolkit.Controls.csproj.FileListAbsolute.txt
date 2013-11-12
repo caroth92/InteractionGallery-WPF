@@ -34,3 +34,25 @@ F:\InteractionGallery-WPF\Microsoft.Kinect.Toolkit.Controls\obj\Debug\Themes\Gen
 F:\InteractionGallery-WPF\Microsoft.Kinect.Toolkit.Controls\obj\Debug\Microsoft.Kinect.Toolkit.Controls.g.resources
 F:\InteractionGallery-WPF\Microsoft.Kinect.Toolkit.Controls\obj\Debug\Microsoft.Kinect.Toolkit.Controls.dll
 F:\InteractionGallery-WPF\Microsoft.Kinect.Toolkit.Controls\obj\Debug\Microsoft.Kinect.Toolkit.Controls.pdb
+C:\Users\Carolina\Documents\Visual Studio 2012\Projects\InteractionGallery-WPF\InteractionGallery-WPF\.Debug\KinectInteraction170_32.dll
+C:\Users\Carolina\Documents\Visual Studio 2012\Projects\InteractionGallery-WPF\InteractionGallery-WPF\.Debug\KinectInteraction170_64.dll
+C:\Users\Carolina\Documents\Visual Studio 2012\Projects\InteractionGallery-WPF\InteractionGallery-WPF\.Debug\Microsoft.Kinect.Toolkit.Controls.dll
+C:\Users\Carolina\Documents\Visual Studio 2012\Projects\InteractionGallery-WPF\InteractionGallery-WPF\.Debug\Microsoft.Kinect.Toolkit.Controls.pdb
+C:\Users\Carolina\Documents\Visual Studio 2012\Projects\InteractionGallery-WPF\Microsoft.Kinect.Toolkit.Controls\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\Carolina\Documents\Visual Studio 2012\Projects\InteractionGallery-WPF\Microsoft.Kinect.Toolkit.Controls\obj\Debug\Microsoft.Kinect.Toolkit.Controls_MarkupCompile.cache
+C:\Users\Carolina\Documents\Visual Studio 2012\Projects\InteractionGallery-WPF\Microsoft.Kinect.Toolkit.Controls\obj\Debug\Microsoft.Kinect.Toolkit.Controls_MarkupCompile.lref
+C:\Users\Carolina\Documents\Visual Studio 2012\Projects\InteractionGallery-WPF\Microsoft.Kinect.Toolkit.Controls\obj\Debug\Themes\Generic.baml
+C:\Users\Carolina\Documents\Visual Studio 2012\Projects\InteractionGallery-WPF\Microsoft.Kinect.Toolkit.Controls\obj\Debug\Microsoft.Kinect.Toolkit.Controls.g.resources
+C:\Users\Carolina\Documents\Visual Studio 2012\Projects\InteractionGallery-WPF\Microsoft.Kinect.Toolkit.Controls\obj\Debug\Microsoft.Kinect.Toolkit.Controls.dll
+C:\Users\Carolina\Documents\Visual Studio 2012\Projects\InteractionGallery-WPF\Microsoft.Kinect.Toolkit.Controls\obj\Debug\Microsoft.Kinect.Toolkit.Controls.pdb
+C:\Users\Carolina\Documents\Visual Studio 2012\Projects\InteractionGallery-WPF-Viejo\InteractionGallery-WPF\.Debug\KinectInteraction170_32.dll
+C:\Users\Carolina\Documents\Visual Studio 2012\Projects\InteractionGallery-WPF-Viejo\InteractionGallery-WPF\.Debug\KinectInteraction170_64.dll
+C:\Users\Carolina\Documents\Visual Studio 2012\Projects\InteractionGallery-WPF-Viejo\InteractionGallery-WPF\.Debug\Microsoft.Kinect.Toolkit.Controls.dll
+C:\Users\Carolina\Documents\Visual Studio 2012\Projects\InteractionGallery-WPF-Viejo\InteractionGallery-WPF\.Debug\Microsoft.Kinect.Toolkit.Controls.pdb
+C:\Users\Carolina\Documents\Visual Studio 2012\Projects\InteractionGallery-WPF-Viejo\Microsoft.Kinect.Toolkit.Controls\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\Carolina\Documents\Visual Studio 2012\Projects\InteractionGallery-WPF-Viejo\Microsoft.Kinect.Toolkit.Controls\obj\Debug\Microsoft.Kinect.Toolkit.Controls_MarkupCompile.cache
+C:\Users\Carolina\Documents\Visual Studio 2012\Projects\InteractionGallery-WPF-Viejo\Microsoft.Kinect.Toolkit.Controls\obj\Debug\Microsoft.Kinect.Toolkit.Controls_MarkupCompile.lref
+C:\Users\Carolina\Documents\Visual Studio 2012\Projects\InteractionGallery-WPF-Viejo\Microsoft.Kinect.Toolkit.Controls\obj\Debug\Themes\Generic.baml
+C:\Users\Carolina\Documents\Visual Studio 2012\Projects\InteractionGallery-WPF-Viejo\Microsoft.Kinect.Toolkit.Controls\obj\Debug\Microsoft.Kinect.Toolkit.Controls.g.resources
+C:\Users\Carolina\Documents\Visual Studio 2012\Projects\InteractionGallery-WPF-Viejo\Microsoft.Kinect.Toolkit.Controls\obj\Debug\Microsoft.Kinect.Toolkit.Controls.dll
+C:\Users\Carolina\Documents\Visual Studio 2012\Projects\InteractionGallery-WPF-Viejo\Microsoft.Kinect.Toolkit.Controls\obj\Debug\Microsoft.Kinect.Toolkit.Controls.pdb

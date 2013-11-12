@@ -82,41 +82,42 @@
     <Compile Include="Converters\MultiplicationConverter.cs" />
     <Compile Include="Converters\NegationConverter.cs" />
     <Compile Include="KinectBO\album.cs">
-      <DependentUpon>kinect.tt</DependentUpon>
+      <DependentUpon>Kinect.tt</DependentUpon>
     </Compile>
+    <Compile Include="KinectBO\Albums.cs" />
     <Compile Include="KinectBO\artista.cs">
-      <DependentUpon>kinect.tt</DependentUpon>
+      <DependentUpon>Kinect.tt</DependentUpon>
     </Compile>
-    <Compile Include="KinectBO\artistasBO.cs" />
+    <Compile Include="KinectBO\Artists.cs" />
     <Compile Include="KinectBO\canciones.cs">
-      <DependentUpon>kinect.tt</DependentUpon>
+      <DependentUpon>Kinect.tt</DependentUpon>
     </Compile>
-    <Compile Include="KinectBO\CancionesBO.cs" />
     <Compile Include="KinectBO\disquera.cs">
-      <DependentUpon>kinect.tt</DependentUpon>
+      <DependentUpon>Kinect.tt</DependentUpon>
     </Compile>
     <Compile Include="KinectBO\genero.cs">
-      <DependentUpon>kinect.tt</DependentUpon>
+      <DependentUpon>Kinect.tt</DependentUpon>
     </Compile>
-    <Compile Include="KinectBO\generoBO.cs" />
-    <Compile Include="KinectBO\kinect.Context.cs">
+    <Compile Include="KinectBO\Genres.cs" />
+    <Compile Include="KinectBO\Kinect.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>kinect.Context.tt</DependentUpon>
+      <DependentUpon>Kinect.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="KinectBO\kinect.cs">
+    <Compile Include="KinectBO\Kinect.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>kinect.tt</DependentUpon>
+      <DependentUpon>Kinect.tt</DependentUpon>
     </Compile>
-    <Compile Include="KinectBO\kinect.Designer.cs">
+    <Compile Include="KinectBO\Kinect.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>kinect.edmx</DependentUpon>
+      <DependentUpon>Kinect.edmx</DependentUpon>
     </Compile>
     <Compile Include="KinectBO\rating.cs">
-      <DependentUpon>kinect.tt</DependentUpon>
+      <DependentUpon>Kinect.tt</DependentUpon>
     </Compile>
+    <Compile Include="KinectBO\Songs.cs" />
     <Compile Include="Models\ArticleModel.cs" />
     <Compile Include="Models\CoverflowModel.cs" />
     <Compile Include="Models\ExperienceOptionModel.cs" />
@@ -174,10 +175,6 @@
     <Resource Include="Content\PannableContentScreen\WorldMap.xaml">
       <SubType>Designer</SubType>
     </Resource>
-    <Page Include="Content\CoverflowScreen\ArtistasCover.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="Controls\KinectButtonStyles.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -274,23 +271,23 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EntityDeploy Include="KinectBO\kinect.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>kinect.Designer.cs</LastGenOutput>
-    </EntityDeploy>
     <None Include="App.Config" />
-    <None Include="KinectBO\kinect.Context.tt">
+    <EntityDeploy Include="KinectBO\Kinect.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Kinect.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="KinectBO\Kinect.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>kinect.edmx</DependentUpon>
-      <LastGenOutput>kinect.Context.cs</LastGenOutput>
+      <DependentUpon>Kinect.edmx</DependentUpon>
+      <LastGenOutput>Kinect.Context.cs</LastGenOutput>
     </None>
-    <None Include="KinectBO\kinect.edmx.diagram">
-      <DependentUpon>kinect.edmx</DependentUpon>
+    <None Include="KinectBO\Kinect.edmx.diagram">
+      <DependentUpon>Kinect.edmx</DependentUpon>
     </None>
-    <None Include="KinectBO\kinect.tt">
+    <None Include="KinectBO\Kinect.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>kinect.edmx</DependentUpon>
-      <LastGenOutput>kinect.cs</LastGenOutput>
+      <DependentUpon>Kinect.edmx</DependentUpon>
+      <LastGenOutput>Kinect.cs</LastGenOutput>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -334,6 +331,9 @@
     <Resource Include="Content\HomeScreen\06.png" />
     <Resource Include="Content\HomeScreen\play-overlay.png" />
     <Resource Include="Content\PannableContentScreen\PannableMapImage.jpg" />
+    <Content Include="Content\Videos\Adele\01_Rolling_In_The_Deep.mp4">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Content\Videos\K4W.wmv">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -348,6 +348,9 @@
     <Resource Include="Content\ArticleScreen\hamlet.jpg" />
     <Resource Include="Content\ArticleScreen\operahouse.jpg" />
     <Resource Include="Content\ArticleScreen\sydney.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Content\CoverflowScreen\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

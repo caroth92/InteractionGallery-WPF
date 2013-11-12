@@ -29,6 +29,18 @@ namespace Microsoft.Kinect.Toolkit.Controls
             "VerticalLabelAlignment", typeof(VerticalAlignment), typeof(KinectTileButton), new PropertyMetadata(VerticalAlignment.Bottom));
 
         /// <summary>
+        /// The Procedence content
+        /// </summary>
+        public static readonly DependencyProperty ProcedenceProperty = DependencyProperty.Register(
+            "Procedence", typeof(object), typeof(KinectTileButton), new PropertyMetadata(null));
+
+        /// <summary>
+        /// The Name content
+        /// </summary>
+        public static readonly DependencyProperty KeyProperty = DependencyProperty.Register(
+            "Key", typeof(object), typeof(KinectTileButton), new PropertyMetadata(null));
+        
+        /// <summary>
         /// The Label content
         /// </summary>
         public static readonly DependencyProperty LabelProperty = DependencyProperty.Register(
@@ -92,7 +104,39 @@ namespace Microsoft.Kinect.Toolkit.Controls
                 this.SetValue(VerticalLabelAlignmentProperty, value);
             }
         }
-        
+
+        /// <summary>
+        /// The Procedence content
+        /// </summary>
+        public object Procedence
+        {
+            get
+            {
+                return this.GetValue(ProcedenceProperty);
+            }
+
+            set
+            {
+                this.SetValue(ProcedenceProperty, value);
+            }
+        }
+
+        /// <summary>
+        /// The Name content
+        /// </summary>
+        public object Key
+        {
+            get
+            {
+                return this.GetValue(KeyProperty);
+            }
+
+            set
+            {
+                this.SetValue(KeyProperty, value);
+            }
+        }
+
         /// <summary>
         /// The Label content
         /// </summary>

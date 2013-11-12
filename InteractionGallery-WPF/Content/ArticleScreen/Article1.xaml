@@ -1,4 +1,4 @@
-﻿<ArticleModel Title="DRAMATIC CLOUDS" xmlns="clr-namespace:Microsoft.Samples.Kinect.InteractionGallery.Models;assembly=InteractionGallery-WPF" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+﻿<ArticleModel Title="Artistas" xmlns="clr-namespace:Microsoft.Samples.Kinect.InteractionGallery.Models;assembly=InteractionGallery-WPF" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <ArticleModel.ImageUris>
         <x:Uri>pack://application:,,,/Content/ArticleScreen/beach.jpg</x:Uri>
         <x:Uri>pack://application:,,,/Content/ArticleScreen/clouds.jpg</x:Uri>

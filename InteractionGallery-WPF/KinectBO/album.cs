@@ -25,9 +25,13 @@ namespace Microsoft.Samples.Kinect.InteractionGallery.KinectBO
         public Nullable<int> idGenero { get; set; }
         public Nullable<int> idDisquera { get; set; }
         public string cover { get; set; }
+        public Nullable<int> idArtista { get; set; }
     
         public virtual disquera disquera { get; set; }
         public virtual genero genero { get; set; }
         public virtual ICollection<canciones> canciones { get; set; }
+        public virtual album album1 { get; set; }
+        public virtual album album2 { get; set; }
+        public virtual artista artista { get; set; }
     }
 }

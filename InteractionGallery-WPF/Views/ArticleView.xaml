@@ -37,7 +37,7 @@
                 <RowDefinition Height="75"/>
             </Grid.RowDefinitions>
 
-            <TextBlock Grid.Row="0" Foreground="#5A5B5B" FontFamily="Segoe UI" FontWeight="Light" FontSize="50" TextWrapping="Wrap" Text="{Binding Title,FallbackValue=Title}" HorizontalAlignment="Left" Margin="0, 0, 0, 60" />
+            <TextBlock x:Name="txtTitle"  Grid.Row="0" Foreground="#5A5B5B" FontFamily="Segoe UI" FontWeight="Light" FontSize="50" TextWrapping="Wrap" Text="{Binding Title,FallbackValue=Title}" HorizontalAlignment="Left" Margin="0, 0, 0, 60" />
 
             <k:KinectItemsControl Grid.Row="1" ItemsSource="{Binding Images}" HorizontalAlignment="Left" Margin="0, 0, 0, 30" 
                                   ItemContainerStyle="{StaticResource KinectTileButton390X219}"

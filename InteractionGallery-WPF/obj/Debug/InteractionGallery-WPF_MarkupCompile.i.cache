@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\DeLaTorre\Documents\Visual Studio 2012\Projects\InteractionGallery-WPF\InteractionGallery-WPF\obj\Debug\
+C:\Users\Carolina\Documents\Visual Studio 2012\Projects\InteractionGallery-WPF-Viejo\InteractionGallery-WPF\obj\Debug\
 Microsoft.Samples.Kinect.InteractionGallery
 none
 false
 DEBUG;TRACE
-C:\Users\DeLaTorre\Documents\Visual Studio 2012\Projects\InteractionGallery-WPF\InteractionGallery-WPF\App.xaml
-16-700012950
-2704690786
-64-1965356724
-21445752289
-Common\StandardStyles.xaml;Content\CoverflowScreen\ArtistasCover.xaml;Controls\KinectButtonStyles.xaml;Controls\PromptControlStyles.xaml;Controls\VideoPlayerStyle.xaml;Views\CoverflowView.xaml;Views\PannableContentView.xaml;Views\PlayView.xaml;Views\VideoView.xaml;Controls\NavigationBanner.xaml;ViewDataTemplate.xaml;Views\ArticleView.xaml;Views\AttractScreenView.xaml;Views\HomeScreenView.xaml;Controls\TransitioningContentControlStyle.xaml;MainWindow.xaml;
+C:\Users\Carolina\Documents\Visual Studio 2012\Projects\InteractionGallery-WPF-Viejo\InteractionGallery-WPF\App.xaml
+15-393605911
+31849141034
+65-1244737924
+211492816649
+Common\StandardStyles.xaml;Controls\KinectButtonStyles.xaml;Controls\PromptControlStyles.xaml;Controls\VideoPlayerStyle.xaml;Views\CoverflowView.xaml;Views\PannableContentView.xaml;Views\PlayView.xaml;Views\VideoView.xaml;Controls\NavigationBanner.xaml;ViewDataTemplate.xaml;Views\ArticleView.xaml;Views\AttractScreenView.xaml;Views\HomeScreenView.xaml;Controls\TransitioningContentControlStyle.xaml;MainWindow.xaml;
 
-True
+False
 

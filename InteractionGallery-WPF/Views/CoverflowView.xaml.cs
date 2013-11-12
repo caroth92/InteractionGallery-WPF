@@ -7,14 +7,30 @@
     using Microsoft.Kinect;
     using Microsoft.Kinect.Toolkit;
     using Microsoft.Kinect.Toolkit.Controls;
-using System.Collections.Generic;
-using Microsoft.Samples.Kinect.InteractionGallery.KinectBO;
+    using System.Collections.Generic;
+    using Microsoft.Samples.Kinect.InteractionGallery.KinectBO;
+    using System.Windows.Media;
 
     /// <summary>
     /// Interaction logic for CoverflowView
     /// </summary>
     public partial class CoverflowView
     {
+        /// <summary>
+        /// Name of the non-transitioning visual state.
+        /// </summary>
+        internal const string NormalState = "Normal";
+
+        /// <summary>
+        /// Name of the fade in transition.
+        /// </summary>
+        internal const string FadeInTransitionState = "FadeIn";
+
+        /// <summary>
+        /// Name of the fade out transition.
+        /// </summary>
+        internal const string FadeOutTransitionState = "FadeOut";
+        
         public static readonly DependencyProperty PageLeftEnabledProperty = DependencyProperty.Register(
             "PageLeftEnabled", typeof(bool), typeof(MainWindow), new PropertyMetadata(false));
 
@@ -24,34 +40,19 @@ using Microsoft.Samples.Kinect.InteractionGallery.KinectBO;
         private const double ScrollErrorMargin = 0.001;
 
         private const int PixelScrollByAmount = 20;
-
-        private readonly KinectSensorChooser sensorChooser;
-
-        private int state { get; set; }
-
+        
         /// <summary>
         /// Initializes a new instance of the <see cref="MainWindow"/> class. 
         /// </summary>
         public CoverflowView()
         {
             this.InitializeComponent();
-
-
-            // Clear out placeholder content
-            //this.wrapPanel.Children.Clear();
-
-            state = 1;
-
-            // Add in display content
-            for (var index = 0; index < 20; ++index)
-            {
-                var button = new KinectTileButton { Label = (index + 1).ToString(CultureInfo.CurrentCulture) };
-                this.wrapPanel.Children.Add(button);
-            }
-
+            
             // Bind listner to scrollviwer scroll position change, and check scroll viewer position
             this.UpdatePagingButtonState();
             scrollViewer.ScrollChanged += (o, e) => this.UpdatePagingButtonState();
+
+            var x = this.txtTitle.Text;
         }
 
         /// <summary>
@@ -136,15 +137,6 @@ using Microsoft.Samples.Kinect.InteractionGallery.KinectBO;
             }
         }
 
-        /// <summary>
-        /// Execute shutdown tasks
-        /// </summary>
-        /// <param name="sender">object sending the event</param>
-        /// <param name="e">event arguments</param>
-        private void WindowClosing(object sender, System.ComponentModel.CancelEventArgs e)
-        {
-            this.sensorChooser.Stop();
-        }
 
         /// <summary>
         /// Handle a button click from the wrap panel.
@@ -158,34 +150,105 @@ using Microsoft.Samples.Kinect.InteractionGallery.KinectBO;
             //var selectionDisplay = new SelectionDisplay(button.Label as string);
             //this.kinectRegionGrid.Children.Add(selectionDisplay);
 
-           switch (state)
-	        {
-               case 1:
-                   var x = artistasBO.Instance.daListaArtistas();
-                   fillInformation("Artistas", x);
-                   break;
-                default:
-                    break;
-	        }
+            var filtro = button.Procedence;
+
+            if(filtro.Equals("Artistas"))
+            {
+                var artistID = button.Key;
+                var albums = Albums.Instance.albumsList(Convert.ToInt16(artistID));
+                fillAlbumInfo("Album", albums);
+            }
+            else if (filtro.Equals("Album"))
+            {
+                var albumID = button.Key;
+                var songs = Songs.Instance.songsList(Convert.ToInt16(albumID));
+                fillSongInfo("Canciones", songs);
+            }
+            else if (filtro.Equals("Géneros"))
+            {
+                var genreID = button.Key;
+                var albums = Albums.Instance.albumsListByGenre(Convert.ToInt16(genreID));
+                fillAlbumInfo("Album", albums);
+            }
+            else if (filtro.Equals("Canciones"))
+            {
+                var songTitle = button.Label as string;
+                var video = Songs.Instance.videoForSong(songTitle);
+                var source = video[0].claveAudio;
+                OnDisplayFullImage(source);   
+            }
+
             e.Handled = true;
         }
 
+        private void viewSongs(String text)
+        {
+            
+        }
 
-
-
-        private void fillInformation(String title, List<artista> lista )
+        private void fillArtistInfo(String title, List<artista> lista )
         {
             this.txtTitle.Text = title;
+            
+            // Clear out placeholder content
+            this.wrapPanel.Children.Clear();
 
             // Add in display content
             for (var index = 0; index < lista.Count; ++index)
             {
-                var button = new KinectTileButton { Label = lista[index].nombre  };
+                var button = new KinectTileButton { Label = lista[index].nombre , Key = lista[index].idArtista.ToString() , Procedence = "Artistas"};
                 this.wrapPanel.Children.Add(button);
             }
 
         }
 
+        private void fillGenreInfo(String title, List<genero> lista)
+        {
+            this.txtTitle.Text = title;
+
+            // Clear out placeholder content
+            this.wrapPanel.Children.Clear();
+
+            // Add in display content
+            for (var index = 0; index < lista.Count; ++index)
+            {
+                var button = new KinectTileButton { Label = lista[index].nombre, Key = lista[index].idGenero.ToString() , Procedence = "Géneros" };
+                this.wrapPanel.Children.Add(button);
+            }
+
+        }
+
+        private void fillAlbumInfo(String title, List<album> lista)
+        {
+            this.txtTitle.Text = title;
+
+            // Clear out placeholder content
+            this.wrapPanel.Children.Clear();
+
+            // Add in display content
+            for (var index = 0; index < lista.Count; ++index)
+            {
+                var button = new KinectTileButton { Label = lista[index].nombre, Key = lista[index].idAlbum.ToString() , Procedence = "Album" };
+                this.wrapPanel.Children.Add(button);
+            }
+
+        }
+
+        private void fillSongInfo(String title, List<canciones> lista)
+        {
+            this.txtTitle.Text = title;
+
+            // Clear out placeholder content
+            this.wrapPanel.Children.Clear();
+
+            // Add in display content
+            for (var index = 0; index < lista.Count; ++index)
+            {
+                var button = new KinectTileButton { Label = lista[index].nombre, Key = lista[index].idAlbum.ToString(), Procedence = "Canciones" };
+                this.wrapPanel.Children.Add(button);
+            }
+
+        }
 
         /// <summary>
         /// Handle paging right (next button).
@@ -214,6 +277,44 @@ using Microsoft.Samples.Kinect.InteractionGallery.KinectBO;
         {
             this.PageLeftEnabled = scrollViewer.HorizontalOffset > ScrollErrorMargin;
             this.PageRightEnabled = scrollViewer.HorizontalOffset < scrollViewer.ScrollableWidth - ScrollErrorMargin;
+        }
+
+        private void txtTitle_Loaded(object sender, RoutedEventArgs e)
+        {
+            // Add in display content
+            var target = this.txtTitle.Text;
+            if(target.Equals("Artistas"))
+            {
+                //var x = Artists.Instance.artistList();
+                fillArtistInfo("Artistas", Artists.Instance.artistList());
+            }
+            else
+            {
+                fillGenreInfo("Géneros", Genres.Instance.genreList());
+            }
+        }
+
+        /// <summary>
+        /// Close the full screen view of the image
+        /// </summary>
+        private void OnCloseFullImage(object sender, RoutedEventArgs e)
+        {
+            // Always go to normal state before a transition
+            VisualStateManager.GoToElementState(OverlayGrid, NormalState, false);
+            VisualStateManager.GoToElementState(OverlayGrid, FadeOutTransitionState, true);
+        }
+
+        /// <summary>
+        /// Overlay the full screen view of the image
+        /// </summary>
+        private void OnDisplayFullImage(string source)
+        {
+            // Always go to normal state before a transition
+            //this.SelectedImage = ((ContentControl)e.OriginalSource).Content as ImageSource;
+            var sourceUri = new System.Uri(source);
+            this.VideoPlayer.Source = sourceUri; 
+            VisualStateManager.GoToElementState(OverlayGrid, NormalState, false);
+            VisualStateManager.GoToElementState(OverlayGrid, FadeInTransitionState, false);
         }
     }
 }

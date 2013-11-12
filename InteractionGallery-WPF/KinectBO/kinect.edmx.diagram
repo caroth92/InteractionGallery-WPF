@@ -4,18 +4,20 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="f5e7ccd6275a44cab92bb4619664c38a" Name="Diagram1">
+      <Diagram DiagramId="d788bc5effcb43fdb4584842fb865e1f" Name="Diagrama1">
         <EntityTypeShape EntityType="kinectModel.album" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
         <EntityTypeShape EntityType="kinectModel.artista" Width="1.5" PointX="3" PointY="5.5" IsExpanded="true" />
         <EntityTypeShape EntityType="kinectModel.canciones" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
         <EntityTypeShape EntityType="kinectModel.disquera" Width="1.5" PointX="0.75" PointY="1.5" IsExpanded="true" />
         <EntityTypeShape EntityType="kinectModel.genero" Width="1.5" PointX="0.75" PointY="5.5" IsExpanded="true" />
         <EntityTypeShape EntityType="kinectModel.rating" Width="1.5" PointX="7.5" PointY="1.5" IsExpanded="true" />
-        <AssociationConnector Association="kinectModel.FK__album__idDisquer__0DAF0CB0" ManuallyRouted="false" />
-        <AssociationConnector Association="kinectModel.FK__album__idGenero__0CBAE877" ManuallyRouted="false" />
-        <AssociationConnector Association="kinectModel.FK__canciones__idAlb__1920BF5C" ManuallyRouted="false" />
-        <AssociationConnector Association="kinectModel.FK__canciones__idArt__1A14E395" ManuallyRouted="false" />
-        <AssociationConnector Association="kinectModel.FK__rating__idCancio__29572725" ManuallyRouted="false" />
+        <AssociationConnector Association="kinectModel.FK__album__idDisquer__0CBAE877" ManuallyRouted="false" />
+        <AssociationConnector Association="kinectModel.FK__album__idGenero__0DAF0CB0" ManuallyRouted="false" />
+        <AssociationConnector Association="kinectModel.FK__canciones__idAlb__1273C1CD" ManuallyRouted="false" />
+        <AssociationConnector Association="kinectModel.FK__canciones__idArt__1367E606" ManuallyRouted="false" />
+        <AssociationConnector Association="kinectModel.FK__rating__idCancio__182C9B23" ManuallyRouted="false" />
+        <AssociationConnector Association="kinectModel.FK_album_idArtista" />
+        <AssociationConnector Association="kinectModel.FK_album_artista" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

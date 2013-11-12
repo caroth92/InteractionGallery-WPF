@@ -1,10 +1,4 @@
-﻿// -----------------------------------------------------------------------
-// <copyright file="ArticleModel.cs" company="Microsoft">
-//     Copyright (c) Microsoft Corporation.  All rights reserved.
-// </copyright>
-//------------------------------------------------------------------------------
-
-namespace Microsoft.Samples.Kinect.InteractionGallery.Models
+﻿namespace Microsoft.Samples.Kinect.InteractionGallery.Models
 {
     using System;
     using System.Collections.Generic;

@@ -4,6 +4,7 @@
     <EntitySetMapping Name="album">
       <EntityTypeMapping TypeName="kinectModel.album">
         <MappingFragment StoreEntitySet="album">
+          <ScalarProperty Name="idArtista" ColumnName="idArtista" />
           <ScalarProperty Name="idAlbum" ColumnName="idAlbum" />
           <ScalarProperty Name="nombre" ColumnName="nombre" />
           <ScalarProperty Name="fechaLanzamiento" ColumnName="fechaLanzamiento" />

@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace Microsoft.Samples.Kinect.InteractionGallery.Models
+﻿namespace Microsoft.Samples.Kinect.InteractionGallery.Models
 {
     using System;
     using System.Collections.Generic;
@@ -11,7 +6,7 @@ namespace Microsoft.Samples.Kinect.InteractionGallery.Models
     /// <summary>
     /// Data model for a coverflow
     /// </summary>
-    class CoverflowModel
+    public class CoverflowModel
     {
         private ICollection<Uri> imageUris;
         private ICollection<string> names;
@@ -21,11 +16,10 @@ namespace Microsoft.Samples.Kinect.InteractionGallery.Models
             Title = string.Empty;
             imageUris = new List<Uri>();
             names = new List<string>();
-
         }
 
         /// <summary>
-        /// Title of the article
+        /// Title of the coverflow
         /// </summary>
         public string Title { get; set; }
 

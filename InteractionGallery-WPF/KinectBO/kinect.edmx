@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="kinectModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+    <Schema Namespace="kinectModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
         <EntityContainer Name="kinectModelStoreContainer">
           <EntitySet Name="album" EntityType="kinectModel.Store.album" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="artista" EntityType="kinectModel.Store.artista" store:Type="Tables" Schema="dbo" />
@@ -12,25 +12,29 @@
           <EntitySet Name="disquera" EntityType="kinectModel.Store.disquera" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="genero" EntityType="kinectModel.Store.genero" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="rating" EntityType="kinectModel.Store.rating" store:Type="Tables" Schema="dbo" />
-          <AssociationSet Name="FK__album__idDisquer__0DAF0CB0" Association="kinectModel.Store.FK__album__idDisquer__0DAF0CB0">
+          <AssociationSet Name="FK__album__idDisquer__0CBAE877" Association="kinectModel.Store.FK__album__idDisquer__0CBAE877">
             <End Role="disquera" EntitySet="disquera" />
             <End Role="album" EntitySet="album" />
           </AssociationSet>
-          <AssociationSet Name="FK__album__idGenero__0CBAE877" Association="kinectModel.Store.FK__album__idGenero__0CBAE877">
+          <AssociationSet Name="FK__album__idGenero__0DAF0CB0" Association="kinectModel.Store.FK__album__idGenero__0DAF0CB0">
             <End Role="genero" EntitySet="genero" />
             <End Role="album" EntitySet="album" />
           </AssociationSet>
-          <AssociationSet Name="FK__canciones__idAlb__1920BF5C" Association="kinectModel.Store.FK__canciones__idAlb__1920BF5C">
+          <AssociationSet Name="FK__canciones__idAlb__1273C1CD" Association="kinectModel.Store.FK__canciones__idAlb__1273C1CD">
             <End Role="album" EntitySet="album" />
             <End Role="canciones" EntitySet="canciones" />
           </AssociationSet>
-          <AssociationSet Name="FK__canciones__idArt__1A14E395" Association="kinectModel.Store.FK__canciones__idArt__1A14E395">
+          <AssociationSet Name="FK__canciones__idArt__1367E606" Association="kinectModel.Store.FK__canciones__idArt__1367E606">
             <End Role="artista" EntitySet="artista" />
             <End Role="canciones" EntitySet="canciones" />
           </AssociationSet>
-          <AssociationSet Name="FK__rating__idCancio__29572725" Association="kinectModel.Store.FK__rating__idCancio__29572725">
+          <AssociationSet Name="FK__rating__idCancio__182C9B23" Association="kinectModel.Store.FK__rating__idCancio__182C9B23">
             <End Role="canciones" EntitySet="canciones" />
             <End Role="rating" EntitySet="rating" />
+          </AssociationSet>
+          <AssociationSet Name="FK_album_artista" Association="kinectModel.Store.FK_album_artista">
+            <End Role="artista" EntitySet="artista" />
+            <End Role="album" EntitySet="album" />
           </AssociationSet>
         </EntityContainer>
         <EntityType Name="album">
@@ -43,6 +47,7 @@
           <Property Name="idGenero" Type="int" />
           <Property Name="idDisquera" Type="int" />
           <Property Name="cover" Type="varchar(max)" />
+          <Property Name="idArtista" Type="int" />
         </EntityType>
         <EntityType Name="artista">
           <Key>
@@ -85,7 +90,7 @@
           <Property Name="idCancion" Type="int" />
           <Property Name="likes" Type="int" />
         </EntityType>
-        <Association Name="FK__album__idDisquer__0DAF0CB0">
+        <Association Name="FK__album__idDisquer__0CBAE877">
           <End Role="disquera" Type="kinectModel.Store.disquera" Multiplicity="0..1" />
           <End Role="album" Type="kinectModel.Store.album" Multiplicity="*" />
           <ReferentialConstraint>
@@ -97,7 +102,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__album__idGenero__0CBAE877">
+        <Association Name="FK__album__idGenero__0DAF0CB0">
           <End Role="genero" Type="kinectModel.Store.genero" Multiplicity="0..1" />
           <End Role="album" Type="kinectModel.Store.album" Multiplicity="*" />
           <ReferentialConstraint>
@@ -109,7 +114,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__canciones__idAlb__1920BF5C">
+        <Association Name="FK__canciones__idAlb__1273C1CD">
           <End Role="album" Type="kinectModel.Store.album" Multiplicity="1" />
           <End Role="canciones" Type="kinectModel.Store.canciones" Multiplicity="*" />
           <ReferentialConstraint>
@@ -121,7 +126,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__canciones__idArt__1A14E395">
+        <Association Name="FK__canciones__idArt__1367E606">
           <End Role="artista" Type="kinectModel.Store.artista" Multiplicity="1" />
           <End Role="canciones" Type="kinectModel.Store.canciones" Multiplicity="*" />
           <ReferentialConstraint>
@@ -133,7 +138,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__rating__idCancio__29572725">
+        <Association Name="FK__rating__idCancio__182C9B23">
           <End Role="canciones" Type="kinectModel.Store.canciones" Multiplicity="0..1" />
           <End Role="rating" Type="kinectModel.Store.rating" Multiplicity="*" />
           <ReferentialConstraint>
@@ -145,8 +150,19 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-      </Schema>
-    </edmx:StorageModels>
+        <Association Name="FK_album_artista">
+          <End Role="artista" Type="kinectModel.Store.artista" Multiplicity="0..1" />
+          <End Role="album" Type="kinectModel.Store.album" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="artista">
+              <PropertyRef Name="idArtista" />
+            </Principal>
+            <Dependent Role="album">
+              <PropertyRef Name="idArtista" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="kinectModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
@@ -157,25 +173,33 @@
           <EntitySet Name="disquera" EntityType="kinectModel.disquera" />
           <EntitySet Name="genero" EntityType="kinectModel.genero" />
           <EntitySet Name="rating" EntityType="kinectModel.rating" />
-          <AssociationSet Name="FK__album__idDisquer__0DAF0CB0" Association="kinectModel.FK__album__idDisquer__0DAF0CB0">
+          <AssociationSet Name="FK__album__idDisquer__0CBAE877" Association="kinectModel.FK__album__idDisquer__0CBAE877">
             <End Role="disquera" EntitySet="disquera" />
             <End Role="album" EntitySet="album" />
           </AssociationSet>
-          <AssociationSet Name="FK__album__idGenero__0CBAE877" Association="kinectModel.FK__album__idGenero__0CBAE877">
+          <AssociationSet Name="FK__album__idGenero__0DAF0CB0" Association="kinectModel.FK__album__idGenero__0DAF0CB0">
             <End Role="genero" EntitySet="genero" />
             <End Role="album" EntitySet="album" />
           </AssociationSet>
-          <AssociationSet Name="FK__canciones__idAlb__1920BF5C" Association="kinectModel.FK__canciones__idAlb__1920BF5C">
+          <AssociationSet Name="FK__canciones__idAlb__1273C1CD" Association="kinectModel.FK__canciones__idAlb__1273C1CD">
             <End Role="album" EntitySet="album" />
             <End Role="canciones" EntitySet="canciones" />
           </AssociationSet>
-          <AssociationSet Name="FK__canciones__idArt__1A14E395" Association="kinectModel.FK__canciones__idArt__1A14E395">
+          <AssociationSet Name="FK__canciones__idArt__1367E606" Association="kinectModel.FK__canciones__idArt__1367E606">
             <End Role="artista" EntitySet="artista" />
             <End Role="canciones" EntitySet="canciones" />
           </AssociationSet>
-          <AssociationSet Name="FK__rating__idCancio__29572725" Association="kinectModel.FK__rating__idCancio__29572725">
+          <AssociationSet Name="FK__rating__idCancio__182C9B23" Association="kinectModel.FK__rating__idCancio__182C9B23">
             <End Role="canciones" EntitySet="canciones" />
             <End Role="rating" EntitySet="rating" />
+          </AssociationSet>
+          <AssociationSet Name="FK_album_idArtista" Association="kinectModel.FK_album_idArtista">
+            <End Role="album" EntitySet="album" />
+            <End Role="album1" EntitySet="album" />
+          </AssociationSet>
+          <AssociationSet Name="FK_album_artista" Association="kinectModel.FK_album_artista">
+            <End Role="artista" EntitySet="artista" />
+            <End Role="album" EntitySet="album" />
           </AssociationSet>
         </EntityContainer>
         <EntityType Name="album">
@@ -188,9 +212,13 @@
           <Property Name="idGenero" Type="Int32" />
           <Property Name="idDisquera" Type="Int32" />
           <Property Name="cover" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
-          <NavigationProperty Name="disquera" Relationship="kinectModel.FK__album__idDisquer__0DAF0CB0" FromRole="album" ToRole="disquera" />
-          <NavigationProperty Name="genero" Relationship="kinectModel.FK__album__idGenero__0CBAE877" FromRole="album" ToRole="genero" />
-          <NavigationProperty Name="canciones" Relationship="kinectModel.FK__canciones__idAlb__1920BF5C" FromRole="album" ToRole="canciones" />
+          <NavigationProperty Name="disquera" Relationship="kinectModel.FK__album__idDisquer__0CBAE877" FromRole="album" ToRole="disquera" />
+          <NavigationProperty Name="genero" Relationship="kinectModel.FK__album__idGenero__0DAF0CB0" FromRole="album" ToRole="genero" />
+          <NavigationProperty Name="canciones" Relationship="kinectModel.FK__canciones__idAlb__1273C1CD" FromRole="album" ToRole="canciones" />
+          <NavigationProperty Name="album1" Relationship="kinectModel.FK_album_idArtista" FromRole="album" ToRole="album1" />
+          <NavigationProperty Name="album2" Relationship="kinectModel.FK_album_idArtista" FromRole="album1" ToRole="album" />
+          <Property Type="Int32" Name="idArtista" />
+          <NavigationProperty Name="artista" Relationship="kinectModel.FK_album_artista" FromRole="album" ToRole="artista" />
         </EntityType>
         <EntityType Name="artista">
           <Key>
@@ -199,7 +227,8 @@
           <Property Name="idArtista" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="nombre" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
           <Property Name="picture" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
-          <NavigationProperty Name="canciones" Relationship="kinectModel.FK__canciones__idArt__1A14E395" FromRole="artista" ToRole="canciones" />
+          <NavigationProperty Name="canciones" Relationship="kinectModel.FK__canciones__idArt__1367E606" FromRole="artista" ToRole="canciones" />
+          <NavigationProperty Name="album" Relationship="kinectModel.FK_album_artista" FromRole="artista" ToRole="album" />
         </EntityType>
         <EntityType Name="canciones">
           <Key>
@@ -211,9 +240,9 @@
           <Property Name="idArtista" Type="Int32" Nullable="false" />
           <Property Name="claveAudio" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
           <Property Name="claveVideo" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
-          <NavigationProperty Name="album" Relationship="kinectModel.FK__canciones__idAlb__1920BF5C" FromRole="canciones" ToRole="album" />
-          <NavigationProperty Name="artista" Relationship="kinectModel.FK__canciones__idArt__1A14E395" FromRole="canciones" ToRole="artista" />
-          <NavigationProperty Name="rating" Relationship="kinectModel.FK__rating__idCancio__29572725" FromRole="canciones" ToRole="rating" />
+          <NavigationProperty Name="album" Relationship="kinectModel.FK__canciones__idAlb__1273C1CD" FromRole="canciones" ToRole="album" />
+          <NavigationProperty Name="artista" Relationship="kinectModel.FK__canciones__idArt__1367E606" FromRole="canciones" ToRole="artista" />
+          <NavigationProperty Name="rating" Relationship="kinectModel.FK__rating__idCancio__182C9B23" FromRole="canciones" ToRole="rating" />
         </EntityType>
         <EntityType Name="disquera">
           <Key>
@@ -221,7 +250,7 @@
           </Key>
           <Property Name="idDisquera" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="nombre" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
-          <NavigationProperty Name="album" Relationship="kinectModel.FK__album__idDisquer__0DAF0CB0" FromRole="disquera" ToRole="album" />
+          <NavigationProperty Name="album" Relationship="kinectModel.FK__album__idDisquer__0CBAE877" FromRole="disquera" ToRole="album" />
         </EntityType>
         <EntityType Name="genero">
           <Key>
@@ -229,7 +258,7 @@
           </Key>
           <Property Name="idGenero" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="nombre" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
-          <NavigationProperty Name="album" Relationship="kinectModel.FK__album__idGenero__0CBAE877" FromRole="genero" ToRole="album" />
+          <NavigationProperty Name="album" Relationship="kinectModel.FK__album__idGenero__0DAF0CB0" FromRole="genero" ToRole="album" />
         </EntityType>
         <EntityType Name="rating">
           <Key>
@@ -238,9 +267,9 @@
           <Property Name="idRating" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="idCancion" Type="Int32" />
           <Property Name="likes" Type="Int32" />
-          <NavigationProperty Name="canciones" Relationship="kinectModel.FK__rating__idCancio__29572725" FromRole="rating" ToRole="canciones" />
+          <NavigationProperty Name="canciones" Relationship="kinectModel.FK__rating__idCancio__182C9B23" FromRole="rating" ToRole="canciones" />
         </EntityType>
-        <Association Name="FK__album__idDisquer__0DAF0CB0">
+        <Association Name="FK__album__idDisquer__0CBAE877">
           <End Role="disquera" Type="kinectModel.disquera" Multiplicity="0..1" />
           <End Role="album" Type="kinectModel.album" Multiplicity="*" />
           <ReferentialConstraint>
@@ -252,7 +281,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__album__idGenero__0CBAE877">
+        <Association Name="FK__album__idGenero__0DAF0CB0">
           <End Role="genero" Type="kinectModel.genero" Multiplicity="0..1" />
           <End Role="album" Type="kinectModel.album" Multiplicity="*" />
           <ReferentialConstraint>
@@ -264,7 +293,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__canciones__idAlb__1920BF5C">
+        <Association Name="FK__canciones__idAlb__1273C1CD">
           <End Role="album" Type="kinectModel.album" Multiplicity="1" />
           <End Role="canciones" Type="kinectModel.canciones" Multiplicity="*" />
           <ReferentialConstraint>
@@ -276,7 +305,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__canciones__idArt__1A14E395">
+        <Association Name="FK__canciones__idArt__1367E606">
           <End Role="artista" Type="kinectModel.artista" Multiplicity="1" />
           <End Role="canciones" Type="kinectModel.canciones" Multiplicity="*" />
           <ReferentialConstraint>
@@ -288,7 +317,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__rating__idCancio__29572725">
+        <Association Name="FK__rating__idCancio__182C9B23">
           <End Role="canciones" Type="kinectModel.canciones" Multiplicity="0..1" />
           <End Role="rating" Type="kinectModel.rating" Multiplicity="*" />
           <ReferentialConstraint>
@@ -297,6 +326,30 @@
             </Principal>
             <Dependent Role="rating">
               <PropertyRef Name="idCancion" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_album_idArtista">
+          <End Type="kinectModel.album" Role="album" Multiplicity="1" />
+          <End Type="kinectModel.album" Role="album1" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="album">
+              <PropertyRef Name="idAlbum" />
+            </Principal>
+            <Dependent Role="album1">
+              <PropertyRef Name="idAlbum" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_album_artista">
+          <End Type="kinectModel.artista" Role="artista" Multiplicity="0..1" />
+          <End Type="kinectModel.album" Role="album" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="artista">
+              <PropertyRef Name="idArtista" />
+            </Principal>
+            <Dependent Role="album">
+              <PropertyRef Name="idArtista" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -309,6 +362,7 @@
           <EntitySetMapping Name="album">
             <EntityTypeMapping TypeName="kinectModel.album">
               <MappingFragment StoreEntitySet="album">
+                <ScalarProperty Name="idArtista" ColumnName="idArtista" />
                 <ScalarProperty Name="idAlbum" ColumnName="idAlbum" />
                 <ScalarProperty Name="nombre" ColumnName="nombre" />
                 <ScalarProperty Name="fechaLanzamiento" ColumnName="fechaLanzamiento" />
@@ -380,7 +434,7 @@
         <DesignerProperty Name="ValidateOnBuild" Value="true" />
         <DesignerProperty Name="EnablePluralization" Value="False" />
         <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
-        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
       </DesignerInfoPropertySet>
     </Options>
     <!-- Diagram content (shape and connector positions) -->

@@ -1,5 +1,5 @@
 ﻿// -----------------------------------------------------------------------
-// <copyright file="ArticleViewModel.cs" company="Microsoft">
+// <copyright file="CoverflowViewModel.cs" company="Microsoft">
 //     Copyright (c) Microsoft Corporation.  All rights reserved.
 // </copyright>
 //------------------------------------------------------------------------
@@ -33,7 +33,7 @@ namespace Microsoft.Samples.Kinect.InteractionGallery.ViewModels
         }
 
         /// <summary>
-        /// Gets the title of the article. Changes to this property 
+        /// Gets the title of the coverflow. Changes to this property 
         /// cause the PropertyChanged event to be signaled
         /// </summary>
         public string Title
@@ -62,5 +62,33 @@ namespace Microsoft.Samples.Kinect.InteractionGallery.ViewModels
         /// </summary>
         public ObservableCollection<ImageSource> Images { get; private set; }
 
+        /// <summary>
+        /// Loads an article from the supplied Uri
+        /// </summary>
+        /// <param name="parameter">Uri pointing to an ArticleModel</param>
+        public override void Initialize(Uri parameter)
+        {
+            if (null == parameter)
+            {
+                throw new ArgumentNullException("parameter");
+            }
+
+            using (Stream coverflowStream = Application.GetResourceStream(parameter).Stream)
+            {
+                if (null == coverflowStream)
+                {
+                    throw new InvalidDataException(string.Format(CultureInfo.InvariantCulture, Resources.InvalidArticle , parameter.AbsolutePath));
+                }
+
+                var coverflow = XamlServices.Load(coverflowStream) as ArticleModel;
+                if (null == coverflow)
+                {
+                    throw new InvalidDataException(string.Format(CultureInfo.InvariantCulture, Resources.InvalidArticle, parameter.AbsolutePath));
+                }
+
+                this.Title = coverflow.Title;
+
+            }
+        }
     }
 }

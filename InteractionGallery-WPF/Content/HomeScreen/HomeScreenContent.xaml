@@ -3,13 +3,13 @@
         Name="ARTISTAS" 
         ImageUri="pack://application:,,,/Content/HomeScreen/new.jpg"
         NavigableContextName="Coverflow" 
-        NavigableContextParameter="pack://application:,,,/Content/CoverflowScreen/ArtistasCover.xaml" />
+        NavigableContextParameter="pack://application:,,,/Content/ArticleScreen/Article1.xaml" />
     <mskbm:ExperienceOptionModel 
         Name="GÉNERO" 
         ImageUri="pack://application:,,,/Content/HomeScreen/imagscore.jpg"
         OverlayImageUri="pack://application:,,,/Content/HomeScreen/new.jpg"
         NavigableContextName="Coverflow" 
-        NavigableContextParameter="Content/Videos/K4W_NISSAN.wmv" />
+        NavigableContextParameter="pack://application:,,,/Content/ArticleScreen/Article2.xaml" />
     <mskbm:ExperienceOptionModel 
         Name="ÉXITOS DEL MES" 
         ImageUri="pack://application:,,,/Content/HomeScreen/check.png" 

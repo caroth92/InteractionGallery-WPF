@@ -15,9 +15,8 @@ namespace Microsoft.Samples.Kinect.InteractionGallery.Views
     /// </summary>
     public partial class ArticleView
     {
-        public static readonly DependencyProperty SelectedImageProperty = DependencyProperty.Register(
-            "SelectedImage", typeof(ImageSource), typeof(ArticleView), new PropertyMetadata(default(ImageSource)));
-
+        public static readonly DependencyProperty SelectedImageProperty = DependencyProperty.Register("SelectedImage", typeof(ImageSource), typeof(ArticleView), new PropertyMetadata(default(ImageSource)));
+        
         /// <summary>
         /// Name of the non-transitioning visual state.
         /// </summary>
@@ -36,6 +35,7 @@ namespace Microsoft.Samples.Kinect.InteractionGallery.Views
         public ArticleView()
         {
             this.InitializeComponent();
+
         }
 
         /// <summary>
