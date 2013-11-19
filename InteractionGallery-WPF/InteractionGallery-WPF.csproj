@@ -84,6 +84,9 @@
     <Compile Include="KinectBO\album.cs">
       <DependentUpon>Kinect.tt</DependentUpon>
     </Compile>
+    <Compile Include="KinectBO\AlbumCover.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="KinectBO\Albums.cs" />
     <Compile Include="KinectBO\artista.cs">
       <DependentUpon>Kinect.tt</DependentUpon>
@@ -172,6 +175,8 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Resource Include="Content\HomeScreen\artists.png" />
+    <Resource Include="Content\HomeScreen\genres.png" />
     <Resource Include="Content\PannableContentScreen\WorldMap.xaml">
       <SubType>Designer</SubType>
     </Resource>
@@ -320,6 +325,11 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="Content\Videos\MichaelJackson\MichaelJackson.jpg" />
+    <Resource Include="Content\Videos\Macklemore\Macklemore.jpg" />
+    <Resource Include="Content\Videos\TheHeist.jpg" />
+    <Resource Include="Content\Videos\Macklemore\TheHeist\TheHeist.jpg" />
+    <Resource Include="Content\Videos\MichaelJackson\Bad\Bad.jpg" />
     <Resource Include="Icon.ico" />
     <Resource Include="Content\Navigation\button-enter.wav" />
     <Resource Include="Content\Navigation\button-select.wav" />
@@ -331,9 +341,24 @@
     <Resource Include="Content\HomeScreen\06.png" />
     <Resource Include="Content\HomeScreen\play-overlay.png" />
     <Resource Include="Content\PannableContentScreen\PannableMapImage.jpg" />
-    <Content Include="Content\Videos\Adele\01_Rolling_In_The_Deep.mp4">
+    <Resource Include="Content\HomeScreen\top.png" />
+    <Content Include="Content\Videos\Adele\21\01_Rolling_In_The_Deep.mp4">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Resource Include="Content\Videos\Adele\21\21.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Content\Videos\DavidGuetta\OneLove\OneLove.jpg" />
+    <Resource Include="Content\Videos\Adele\Adele.jpg" />
+    <Resource Include="Content\Videos\DavidGuetta\DavidGuetta.jpg" />
+    <Content Include="Content\Videos\Adele\21\02_Rumour_Has_It.mp4" />
+    <Content Include="Content\Videos\Adele\21\03_Turning_Tables.mp4" />
+    <Content Include="Content\Videos\Adele\21\04_Don%27t_You_Remember.mp4" />
+    <Content Include="Content\Videos\Adele\21\05_Set_Fire_To_The_Rain.mp4" />
+    <Content Include="Content\Videos\Adele\21\06_He_Won%27t_Go.mp4" />
+    <Content Include="Content\Videos\Adele\21\07_Take_It_All.mp4" />
+    <Content Include="Content\Videos\Adele\21\08_I%27ll_Be_Waiting.mp4" />
+    <Content Include="Content\Videos\Adele\21\09_One_And_Only.mp4" />
     <Content Include="Content\Videos\K4W.wmv">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

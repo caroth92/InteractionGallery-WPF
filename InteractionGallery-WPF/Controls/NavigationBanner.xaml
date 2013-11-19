@@ -6,11 +6,11 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              mc:Ignorable="d" 
              d:Height="250"
-             d:DesignWidth="1000">
+             d:DesignWidth="500">
     
     <Grid>
-        <Image Source="/InteractionGallery-WPF;component/Content/Navigation/logo.png" Height="71" Width="178" Margin="75, 85, 0, 0" HorizontalAlignment="Left" VerticalAlignment="Top"
-               Visibility="{Binding CanGoBack, ConverterParameter=False, Converter={StaticResource InvertibleBooleanToVisibilityConverter}}" />
+        <!-- <Image Source="/InteractionGallery-WPF;component/Content/Navigation/logo.png" Height="71" Width="178" Margin="75, 85, 0, 0" HorizontalAlignment="Left" VerticalAlignment="Top"
+               Visibility="{Binding CanGoBack, ConverterParameter=False, Converter={StaticResource InvertibleBooleanToVisibilityConverter}}" /> -->
 
         <k:KinectCircleButton Style="{StaticResource BackButtonStyle}" Margin="45, 45, 0, 0" HorizontalAlignment="Left" VerticalAlignment="Top" LabelPosition="None"
                 Visibility="{Binding CanGoBack, Converter={StaticResource InvertibleBooleanToVisibilityConverter}}"

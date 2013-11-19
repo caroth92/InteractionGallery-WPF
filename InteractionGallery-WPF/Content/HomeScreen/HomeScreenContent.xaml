@@ -1,18 +1,17 @@
 ﻿<List x:TypeArguments="mskbm:ExperienceOptionModel" xmlns="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:mskbm="clr-namespace:Microsoft.Samples.Kinect.InteractionGallery.Models;assembly=InteractionGallery-WPF" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <mskbm:ExperienceOptionModel 
         Name="ARTISTAS" 
-        ImageUri="pack://application:,,,/Content/HomeScreen/new.jpg"
+        ImageUri="pack://application:,,,/Content/HomeScreen/artists.png"
         NavigableContextName="Coverflow" 
         NavigableContextParameter="pack://application:,,,/Content/ArticleScreen/Article1.xaml" />
     <mskbm:ExperienceOptionModel 
         Name="GÉNERO" 
-        ImageUri="pack://application:,,,/Content/HomeScreen/imagscore.jpg"
-        OverlayImageUri="pack://application:,,,/Content/HomeScreen/new.jpg"
+        ImageUri="pack://application:,,,/Content/HomeScreen/genres.png"
         NavigableContextName="Coverflow" 
         NavigableContextParameter="pack://application:,,,/Content/ArticleScreen/Article2.xaml" />
     <mskbm:ExperienceOptionModel 
         Name="ÉXITOS DEL MES" 
-        ImageUri="pack://application:,,,/Content/HomeScreen/check.png" 
-        NavigableContextName="Article" 
+        ImageUri="pack://application:,,,/Content/HomeScreen/top.png" 
+        NavigableContextName="AttractScreenView" 
         NavigableContextParameter="pack://application:,,,/Content/ArticleScreen/Article2.xaml" />
 </List>

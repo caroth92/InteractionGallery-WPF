@@ -19,8 +19,8 @@ namespace Microsoft.Samples.Kinect.InteractionGallery
     /// </summary>
     public partial class MainWindow : Window
     {
-        private const int MinimumScreenWidth = 1920;
-        private const int MinimumScreenHeight = 1080;
+        private const int MinimumScreenWidth = 1280;
+        private const int MinimumScreenHeight = 720;
 
         /// <summary>
         /// Mouse movement detector.

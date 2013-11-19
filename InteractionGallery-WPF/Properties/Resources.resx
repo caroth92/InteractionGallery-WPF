@@ -144,7 +144,7 @@ to keep control</value>
     <value>You have selected {0}</value>
   </data>
   <data name="SuboptimalScreenResolutionMessage" xml:space="preserve">
-    <value>This sample was designed 1920 x 1080 screen resolution.
+    <value>This sample was designed 1280 x 720 screen resolution.
 Running it in a lower resolution may result in incorrect layout and reduced functionality.
 Do you wish to continue?</value>
   </data>

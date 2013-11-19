@@ -10,6 +10,8 @@
     using System.Collections.Generic;
     using Microsoft.Samples.Kinect.InteractionGallery.KinectBO;
     using System.Windows.Media;
+    using System.Windows.Media.Imaging;
+    using Microsoft.Samples.Kinect.InteractionGallery.NewFolder1;
 
     /// <summary>
     /// Interaction logic for CoverflowView
@@ -197,6 +199,9 @@
             for (var index = 0; index < lista.Count; ++index)
             {
                 var button = new KinectTileButton { Label = lista[index].nombre , Key = lista[index].idArtista.ToString() , Procedence = "Artistas"};
+                var brush = new ImageBrush();
+                brush.ImageSource = new BitmapImage(new Uri(lista[index].picture));
+                button.Background = brush;
                 this.wrapPanel.Children.Add(button);
             }
 
@@ -228,13 +233,18 @@
             // Add in display content
             for (var index = 0; index < lista.Count; ++index)
             {
-                var button = new KinectTileButton { Label = lista[index].nombre, Key = lista[index].idAlbum.ToString() , Procedence = "Album" };
+                var button = new KinectTileButton { Label = lista[index].nombre, Key = lista[index].idAlbum.ToString() , Procedence = "Album",  };
+                var brush = new ImageBrush();
+                brush.ImageSource = new BitmapImage(new Uri(lista[index].cover));
+                button.Background = brush;
+               // (button.Label as System.Windows.Controls.Label).Height = 200;
+                
                 this.wrapPanel.Children.Add(button);
             }
 
         }
 
-        private void fillSongInfo(String title, List<canciones> lista)
+        private void fillSongInfo(String title, List<AlbumCover> lista)
         {
             this.txtTitle.Text = title;
 
@@ -245,6 +255,9 @@
             for (var index = 0; index < lista.Count; ++index)
             {
                 var button = new KinectTileButton { Label = lista[index].nombre, Key = lista[index].idAlbum.ToString(), Procedence = "Canciones" };
+                var brush = new ImageBrush();
+                brush.ImageSource = new BitmapImage(new Uri(lista[index].cover));
+                button.Background = brush;
                 this.wrapPanel.Children.Add(button);
             }
 
@@ -316,5 +329,6 @@
             VisualStateManager.GoToElementState(OverlayGrid, NormalState, false);
             VisualStateManager.GoToElementState(OverlayGrid, FadeInTransitionState, false);
         }
+
     }
 }

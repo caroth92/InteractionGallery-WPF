@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Samples.Kinect.InteractionGallery.NewFolder1;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -34,15 +35,22 @@ namespace Microsoft.Samples.Kinect.InteractionGallery.KinectBO
 
         #endregion
 
-        public List<canciones> songsList(int albumID)
+
+        public List<AlbumCover> songsList(int albumID)
         {
-            List<canciones> songs;
+            List<AlbumCover> songs;
             using (var bd = new kinectEntities())
             {
                 songs = (from c
-                             in bd.canciones
-                             where c.idAlbum == albumID
-                             select c).ToList();
+                         in bd.canciones
+                         join x in bd.album on c.idAlbum equals x.idAlbum
+                         where c.idAlbum == albumID
+                         select new AlbumCover()
+                         {
+                             idAlbum=c.idAlbum,
+                             cover=x.cover,
+                             nombre=c.nombre,
+                         }).ToList();
             }
             return songs;
         }

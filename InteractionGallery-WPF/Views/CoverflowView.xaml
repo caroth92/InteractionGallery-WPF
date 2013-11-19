@@ -9,7 +9,7 @@
         mc:Ignorable="d"
         HorizontalAlignment="Stretch"
         VerticalAlignment="Stretch">
-    
+
     <UserControl.Resources>
         <SolidColorBrush x:Key="MediumGreyBrush" Color="#ff6e6e6e"/>
 
@@ -98,17 +98,12 @@
             <Setter Property="Content" Value="{StaticResource ChevronLeft}"/>
         </Style>
 
-        <Style TargetType="{x:Type k:KinectTileButton}" 
-           BasedOn="{StaticResource {x:Type k:KinectTileButton}}" 
-           x:Key="KinectTileButton390X219">
-            <Setter Property="Width" Value="390" />
-            <Setter Property="Height" Value="219" />
-        </Style>
-
     </UserControl.Resources>
 
     <Grid x:Name="SuperGrid">
         <ContentPresenter Content="{Binding NavigationManager}" />
+
+        <TextBlock Loaded="txtTitle_Loaded" x:Name="txtTitle" Foreground="#5A5B5B" FontFamily="Segoe UI" FontWeight="Light" FontSize="50" TextWrapping="Wrap" Text="{Binding Title, FallbackValue=Title}" Margin="789,73,0,60" Width="561" HorizontalAlignment="Center" TextAlignment="Center"/>
 
         <Grid x:Name="Grid" Margin="50, 180, 50, 0" Grid.Row="1">
             <Grid.RowDefinitions>
@@ -116,12 +111,11 @@
                 <RowDefinition Height="170"/>
             </Grid.RowDefinitions>
 
-            <TextBlock Loaded="txtTitle_Loaded" x:Name="txtTitle" Grid.Row="0" Foreground="#5A5B5B" FontFamily="Segoe UI" FontWeight="Light" FontSize="50" TextWrapping="Wrap" Text="{Binding Title}" HorizontalAlignment="Left" Margin="0, 0, 0, 60" />
-
             <k:KinectScrollViewer Grid.Row="0" Name="scrollViewer" HorizontalScrollBarVisibility="Visible" VerticalScrollBarVisibility="Disabled" Grid.ColumnSpan="2">
                 <WrapPanel VerticalAlignment="Center" x:Name="wrapPanel" Orientation="Vertical" k:KinectTileButton.Click="KinectTileButtonClick">
                     <!-- items for design layout.  They will be replaced at runtime. -->
-                    <k:KinectTileButton Label="1"/>
+                    <!-- items for design layout.  They will be replaced at runtime. -->
+                    <k:KinectTileButton Label="Rolling in the deep" HorizontalLabelAlignment="Left"/>
                     <k:KinectTileButton Label="2"/>
                     <k:KinectTileButton Label="3"/>
                     <k:KinectTileButton Label="4"/>
