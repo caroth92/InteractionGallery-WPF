@@ -175,7 +175,7 @@
             <Viewbox MaxHeight="720" MaxWidth="1280" Margin="60 60 60 60">
                 <Canvas Width="1280" Height="720">
                     <Border BorderThickness="3" BorderBrush="White" Width="1280" Height="720">
-                        <local:VideoPlayer x:Name="VideoPlayer" Source="{Binding Video}" IsPlaying="{Binding CanPause}" ShowProgressBar="{Binding IsUserInteracting}"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                        <local:VideoPlayer x:Name="VideoPlayer" Source="" IsPlaying="{Binding CanPause}" ShowProgressBar="True"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
                             <u:CommandOnEventHelper.AssociationEntry>
                                 <u:CommandOnEventAssociation Command="{Binding VideoResetNotification}" Event="VideoEnded"/>
                             </u:CommandOnEventHelper.AssociationEntry>

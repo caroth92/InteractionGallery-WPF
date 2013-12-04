@@ -11,10 +11,10 @@ false
 DEBUG;TRACE
 C:\Users\Carolina\Documents\Visual Studio 2012\Projects\InteractionGallery-WPF\InteractionGallery-WPF\App.xaml
 15-393605911
-11-1153539775
-661511211403
+10-2006206834
+671586877060
 211830426664
 Common\StandardStyles.xaml;Controls\KinectButtonStyles.xaml;Controls\PromptControlStyles.xaml;Controls\VideoPlayerStyle.xaml;Views\CoverflowView.xaml;Views\PannableContentView.xaml;Views\PlayView.xaml;Views\VideoView.xaml;Controls\NavigationBanner.xaml;ViewDataTemplate.xaml;Views\ArticleView.xaml;Views\AttractScreenView.xaml;Views\HomeScreenView.xaml;Controls\TransitioningContentControlStyle.xaml;MainWindow.xaml;
 
-False
+True
 

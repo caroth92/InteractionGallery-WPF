@@ -53,7 +53,7 @@ namespace Microsoft.Samples.Kinect.InteractionGallery.Controls
         /// <summary>
         /// MediaElement responsible for displaying the video.
         /// </summary>
-        private MediaElement mediaElement;
+        public MediaElement mediaElement;
 
         private ProgressBar progressBar;
         private TextBlock currentProgressTextBlock;

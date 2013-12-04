@@ -12,6 +12,8 @@
     using System.Windows.Media;
     using System.Windows.Media.Imaging;
     using Microsoft.Samples.Kinect.InteractionGallery.NewFolder1;
+    using Microsoft.Samples.Kinect.InteractionGallery.ViewModels;
+    using System.IO;
 
     /// <summary>
     /// Interaction logic for CoverflowView
@@ -42,7 +44,9 @@
         private const double ScrollErrorMargin = 0.001;
 
         private const int PixelScrollByAmount = 20;
-        
+
+        CoverflowViewModel coverfl = new CoverflowViewModel();
+
         /// <summary>
         /// Initializes a new instance of the <see cref="MainWindow"/> class. 
         /// </summary>
@@ -172,20 +176,17 @@
                 var albums = Albums.Instance.albumsListByGenre(Convert.ToInt16(genreID));
                 fillAlbumInfo("Album", albums);
             }
-            else if (filtro.Equals("Canciones"))
+            else if (filtro.Equals("Canciones") || filtro.Equals("Éxitos"))
             {
                 var songTitle = button.Label as string;
                 var video = Songs.Instance.videoForSong(songTitle);
                 var source = video[0].claveAudio;
+                var songID = button.Key as string;
+                Songs.Instance.addRating(Convert.ToInt16(songID));
                 OnDisplayFullImage(source);   
             }
 
             e.Handled = true;
-        }
-
-        private void viewSongs(String text)
-        {
-            
         }
 
         private void fillArtistInfo(String title, List<artista> lista )
@@ -254,7 +255,26 @@
             // Add in display content
             for (var index = 0; index < lista.Count; ++index)
             {
-                var button = new KinectTileButton { Label = lista[index].nombre, Key = lista[index].idAlbum.ToString(), Procedence = "Canciones" };
+                var button = new KinectTileButton { Label = lista[index].nombre, Key = lista[index].idCancion.ToString(), Procedence = "Canciones" };
+                var brush = new ImageBrush();
+                brush.ImageSource = new BitmapImage(new Uri(lista[index].cover));
+                button.Background = brush;
+                this.wrapPanel.Children.Add(button);
+            }
+
+        }
+
+        private void fillHitsInfo(String title, List<listaRatingEntity> lista)
+        {
+            this.txtTitle.Text = title;
+
+            // Clear out placeholder content
+            this.wrapPanel.Children.Clear();
+
+            // Add in display content
+            for (var index = 0; index < lista.Count; ++index)
+            {
+                var button = new KinectTileButton { Label = lista[index].nombre, Key = lista[index].idCancion.ToString(), Procedence = "Canciones" };
                 var brush = new ImageBrush();
                 brush.ImageSource = new BitmapImage(new Uri(lista[index].cover));
                 button.Background = brush;
@@ -298,12 +318,15 @@
             var target = this.txtTitle.Text;
             if(target.Equals("Artistas"))
             {
-                //var x = Artists.Instance.artistList();
                 fillArtistInfo("Artistas", Artists.Instance.artistList());
             }
-            else
+            else if(target.Equals("Géneros"))
             {
                 fillGenreInfo("Géneros", Genres.Instance.genreList());
+            }
+            else if (target.Equals("Éxitos"))
+            {
+                fillHitsInfo("Éxitos", Songs.Instance.getHits());
             }
         }
 
@@ -315,6 +338,7 @@
             // Always go to normal state before a transition
             VisualStateManager.GoToElementState(OverlayGrid, NormalState, false);
             VisualStateManager.GoToElementState(OverlayGrid, FadeOutTransitionState, true);
+            this.VideoPlayer.mediaElement.Stop();
         }
 
         /// <summary>
@@ -323,9 +347,10 @@
         private void OnDisplayFullImage(string source)
         {
             // Always go to normal state before a transition
-            //this.SelectedImage = ((ContentControl)e.OriginalSource).Content as ImageSource;
-            var sourceUri = new System.Uri(source);
-            this.VideoPlayer.Source = sourceUri; 
+            var fullPath = Path.GetFullPath(source);
+            var sourceUri = new System.Uri(fullPath);
+            this.VideoPlayer.Source = sourceUri;
+            this.VideoPlayer.mediaElement.Play();
             VisualStateManager.GoToElementState(OverlayGrid, NormalState, false);
             VisualStateManager.GoToElementState(OverlayGrid, FadeInTransitionState, false);
         }

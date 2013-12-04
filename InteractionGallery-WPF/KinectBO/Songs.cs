@@ -50,6 +50,7 @@ namespace Microsoft.Samples.Kinect.InteractionGallery.KinectBO
                              idAlbum=c.idAlbum,
                              cover=x.cover,
                              nombre=c.nombre,
+                             idCancion=c.idCancion,
                          }).ToList();
             }
             return songs;
@@ -67,5 +68,39 @@ namespace Microsoft.Samples.Kinect.InteractionGallery.KinectBO
             }
             return song;
         }
+        
+        public void addRating(int songID)
+        {
+            using (var bd = new kinectEntities())
+            {
+                rating r = bd.rating.Single(x => x.idCancion == songID);
+                r.likes = r.likes + 1;
+                bd.SaveChanges();
+            }
+        }
+
+        public List<listaRatingEntity> getHits()
+        {
+            List<listaRatingEntity> r;
+            using (var bd = new kinectEntities())
+            {
+                r = (from ra
+                        in bd.rating
+                     join x in bd.canciones on ra.idCancion equals x.idCancion
+                     join y in bd.album on x.idAlbum equals y.idAlbum
+                     select new listaRatingEntity()
+                     {
+                         nombre = x.nombre,
+                         idCancion = x.idCancion,
+                         claveAudio = x.claveAudio,
+                         likes = ra.likes,
+                         cover = y.cover,
+                     }).OrderByDescending(p => p.likes).ToList();
+            }
+
+            return r.Take(5).ToList();
+           
+        }
     }
+
 }

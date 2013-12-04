@@ -8,6 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("content/videos/k4w.wmv")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("content/videos/adele/21/01_rolling_in_the_deep.mp4")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("content/videos/adele/21/02_rumour_has_it.mp4")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("content/videos/adele/21/03_turning_tables.mp4")]
@@ -17,7 +18,5 @@
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("content/videos/adele/21/07_take_it_all.mp4")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("content/videos/adele/21/08_i\'ll_be_waiting.mp4")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("content/videos/adele/21/09_one_and_only.mp4")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("content/videos/k4w.wmv")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("content/videos/k4w_nissan.wmv")]
 
 

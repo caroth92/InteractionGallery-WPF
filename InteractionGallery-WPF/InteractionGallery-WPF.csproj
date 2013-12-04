@@ -117,6 +117,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Kinect.edmx</DependentUpon>
     </Compile>
+    <Compile Include="KinectBO\listaRatingEntity.cs" />
     <Compile Include="KinectBO\rating.cs">
       <DependentUpon>Kinect.tt</DependentUpon>
     </Compile>
@@ -178,6 +179,9 @@
     <Resource Include="Content\HomeScreen\artists.png" />
     <Resource Include="Content\HomeScreen\genres.png" />
     <Resource Include="Content\PannableContentScreen\WorldMap.xaml">
+      <SubType>Designer</SubType>
+    </Resource>
+    <Resource Include="Content\ArticleScreen\Article3.xaml">
       <SubType>Designer</SubType>
     </Resource>
     <Page Include="Controls\KinectButtonStyles.xaml">
@@ -325,6 +329,9 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\Videos\K4W.wmv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Resource Include="Content\Videos\MichaelJackson\MichaelJackson.jpg" />
     <Resource Include="Content\Videos\Macklemore\Macklemore.jpg" />
     <Resource Include="Content\Videos\TheHeist.jpg" />
@@ -333,13 +340,6 @@
     <Resource Include="Icon.ico" />
     <Resource Include="Content\Navigation\button-enter.wav" />
     <Resource Include="Content\Navigation\button-select.wav" />
-    <Resource Include="Content\HomeScreen\01.png" />
-    <Resource Include="Content\HomeScreen\02.png" />
-    <Resource Include="Content\HomeScreen\03.png" />
-    <Resource Include="Content\HomeScreen\04.png" />
-    <Resource Include="Content\HomeScreen\05.png" />
-    <Resource Include="Content\HomeScreen\06.png" />
-    <Resource Include="Content\HomeScreen\play-overlay.png" />
     <Resource Include="Content\PannableContentScreen\PannableMapImage.jpg" />
     <Resource Include="Content\HomeScreen\top.png" />
     <Content Include="Content\Videos\Adele\21\01_Rolling_In_The_Deep.mp4">
@@ -359,12 +359,6 @@
     <Content Include="Content\Videos\Adele\21\07_Take_It_All.mp4" />
     <Content Include="Content\Videos\Adele\21\08_I%27ll_Be_Waiting.mp4" />
     <Content Include="Content\Videos\Adele\21\09_One_And_Only.mp4" />
-    <Content Include="Content\Videos\K4W.wmv">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Content\Videos\K4W_NISSAN.wmv">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Content\ArticleScreen\beach.jpg" />
@@ -374,9 +368,7 @@
     <Resource Include="Content\ArticleScreen\operahouse.jpg" />
     <Resource Include="Content\ArticleScreen\sydney.jpg" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Content\CoverflowScreen\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

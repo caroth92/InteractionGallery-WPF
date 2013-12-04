@@ -28,8 +28,7 @@ namespace Microsoft.Samples.Kinect.InteractionGallery.ViewModels
         public ArticleViewModel()
             : base()
         {
-            this.Paragraphs = new ObservableCollection<string>();
-            this.Images = new ObservableCollection<ImageSource>();
+
         }
 
         /// <summary>
@@ -50,18 +49,7 @@ namespace Microsoft.Samples.Kinect.InteractionGallery.ViewModels
             }
         }
 
-        /// <summary>
-        /// Gets the collection of paragraphs composing the content of the article.
-        /// Changes to this property cause the PropertyChanged event to be signaled.
-        /// </summary>
-        public ObservableCollection<string> Paragraphs { get; private set; }
-
-        /// <summary>
-        /// Gets the collection of images associated with the article. 
-        /// Changes to the paragraphs cause the CollectionChanged event to be signaled.
-        /// </summary>
-        public ObservableCollection<ImageSource> Images { get; private set; }
-
+       
         /// <summary>
         /// Loads an article from the supplied Uri
         /// </summary>
@@ -87,13 +75,6 @@ namespace Microsoft.Samples.Kinect.InteractionGallery.ViewModels
                 }
 
                 this.Title = article.Title;
-
-                this.Paragraphs.Clear();
-                article.Paragraphs.ToList<string>().ForEach(this.Paragraphs.Add);
-
-                this.Images.Clear();
-                new List<ImageSource>(from imageUri in article.ImageUris
-                                      select new BitmapImage(imageUri)).ForEach(this.Images.Add);
             }
         }
     }

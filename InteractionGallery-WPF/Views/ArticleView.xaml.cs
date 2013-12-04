@@ -32,10 +32,40 @@ namespace Microsoft.Samples.Kinect.InteractionGallery.Views
         /// </summary>
         internal const string FadeOutTransitionState = "FadeOut";
 
+        public static readonly DependencyProperty PageLeftEnabledProperty = DependencyProperty.Register(
+            "PageLeftEnabled", typeof(bool), typeof(MainWindow), new PropertyMetadata(false));
+
+        public static readonly DependencyProperty PageRightEnabledProperty = DependencyProperty.Register(
+            "PageRightEnabled", typeof(bool), typeof(MainWindow), new PropertyMetadata(false));
+
+        private const double ScrollErrorMargin = 0.001;
+
+        private const int PixelScrollByAmount = 20;
+
         public ArticleView()
         {
             this.InitializeComponent();
 
+        }
+
+        /// <summary>
+        /// Handle paging right (next button).
+        /// </summary>
+        /// <param name="sender">Event sender</param>
+        /// <param name="e">Event arguments</param>
+        private void PageRightButtonClick(object sender, RoutedEventArgs e)
+        {
+            scrollViewer.ScrollToHorizontalOffset(scrollViewer.HorizontalOffset + PixelScrollByAmount);
+        }
+
+        /// <summary>
+        /// Handle paging left (previous button).
+        /// </summary>
+        /// <param name="sender">Event sender</param>
+        /// <param name="e">Event arguments</param>
+        private void PageLeftButtonClick(object sender, RoutedEventArgs e)
+        {
+            scrollViewer.ScrollToHorizontalOffset(scrollViewer.HorizontalOffset - PixelScrollByAmount);
         }
 
         /// <summary>
@@ -74,6 +104,16 @@ namespace Microsoft.Samples.Kinect.InteractionGallery.Views
             this.SelectedImage = ((ContentControl)e.OriginalSource).Content as ImageSource;
             VisualStateManager.GoToElementState(OverlayGrid, NormalState, false);
             VisualStateManager.GoToElementState(OverlayGrid, FadeInTransitionState, false);
+        }
+
+        /// <summary>
+        /// Handle a button click from the wrap panel.
+        /// </summary>
+        /// <param name="sender">Event sender</param>
+        /// <param name="e">Event arguments</param>
+        private void KinectTileButtonClick(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

@@ -28,8 +28,7 @@ namespace Microsoft.Samples.Kinect.InteractionGallery.ViewModels
         public CoverflowViewModel()
             : base()
         {
-            this.Names = new ObservableCollection<string>();
-            this.Images = new ObservableCollection<ImageSource>();
+
         }
 
         /// <summary>
@@ -51,18 +50,6 @@ namespace Microsoft.Samples.Kinect.InteractionGallery.ViewModels
         }
 
         /// <summary>
-        /// Gets the collection of paragraphs composing the content of the article.
-        /// Changes to this property cause the PropertyChanged event to be signaled.
-        /// </summary>
-        public ObservableCollection<string> Names { get; private set; }
-
-        /// <summary>
-        /// Gets the collection of images associated with the article. 
-        /// Changes to the paragraphs cause the CollectionChanged event to be signaled.
-        /// </summary>
-        public ObservableCollection<ImageSource> Images { get; private set; }
-
-        /// <summary>
         /// Loads an article from the supplied Uri
         /// </summary>
         /// <param name="parameter">Uri pointing to an ArticleModel</param>
@@ -74,13 +61,13 @@ namespace Microsoft.Samples.Kinect.InteractionGallery.ViewModels
             }
 
             using (Stream coverflowStream = Application.GetResourceStream(parameter).Stream)
-            {
+            { 
                 if (null == coverflowStream)
                 {
                     throw new InvalidDataException(string.Format(CultureInfo.InvariantCulture, Resources.InvalidArticle , parameter.AbsolutePath));
                 }
 
-                var coverflow = XamlServices.Load(coverflowStream) as ArticleModel;
+                var coverflow = XamlServices.Load(coverflowStream) as CoverflowModel;
                 if (null == coverflow)
                 {
                     throw new InvalidDataException(string.Format(CultureInfo.InvariantCulture, Resources.InvalidArticle, parameter.AbsolutePath));
@@ -90,5 +77,6 @@ namespace Microsoft.Samples.Kinect.InteractionGallery.ViewModels
 
             }
         }
+
     }
 }

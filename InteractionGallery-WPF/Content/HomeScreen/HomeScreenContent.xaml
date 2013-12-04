@@ -7,11 +7,11 @@
     <mskbm:ExperienceOptionModel 
         Name="GÉNERO" 
         ImageUri="pack://application:,,,/Content/HomeScreen/genres.png"
-        NavigableContextName="Coverflow" 
-        NavigableContextParameter="pack://application:,,,/Content/ArticleScreen/Article2.xaml" />
+        NavigableContextName="Video" 
+        NavigableContextParameter="pack://application:,,,/Content/ArticleScreen/Article3.xaml" />
     <mskbm:ExperienceOptionModel 
         Name="ÉXITOS DEL MES" 
         ImageUri="pack://application:,,,/Content/HomeScreen/top.png" 
-        NavigableContextName="AttractScreenView" 
+        NavigableContextName="Coverflow" 
         NavigableContextParameter="pack://application:,,,/Content/ArticleScreen/Article2.xaml" />
 </List>
