@@ -30,8 +30,6 @@ namespace Microsoft.Samples.Kinect.InteractionGallery.KinectBO
         public virtual disquera disquera { get; set; }
         public virtual genero genero { get; set; }
         public virtual ICollection<canciones> canciones { get; set; }
-        public virtual album album1 { get; set; }
-        public virtual album album2 { get; set; }
         public virtual artista artista { get; set; }
     }
 }

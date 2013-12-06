@@ -13,10 +13,10 @@ namespace Microsoft.Samples.Kinect.InteractionGallery.KinectBO
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class kinectEntities : DbContext
+    public partial class kinectEntities1 : DbContext
     {
-        public kinectEntities()
-            : base("name=kinectEntities")
+        public kinectEntities1()
+            : base("name=kinectEntities1")
         {
         }
     

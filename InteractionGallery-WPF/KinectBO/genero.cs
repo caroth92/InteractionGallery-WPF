@@ -21,6 +21,7 @@ namespace Microsoft.Samples.Kinect.InteractionGallery.KinectBO
     
         public int idGenero { get; set; }
         public string nombre { get; set; }
+        public string cover { get; set; }
     
         public virtual ICollection<album> album { get; set; }
     }

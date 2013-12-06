@@ -7,7 +7,7 @@
     <mskbm:ExperienceOptionModel 
         Name="GÉNERO" 
         ImageUri="pack://application:,,,/Content/HomeScreen/genres.png"
-        NavigableContextName="Video" 
+        NavigableContextName="Coverflow" 
         NavigableContextParameter="pack://application:,,,/Content/ArticleScreen/Article3.xaml" />
     <mskbm:ExperienceOptionModel 
         Name="ÉXITOS DEL MES" 

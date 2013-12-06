@@ -25,6 +25,7 @@ namespace Microsoft.Samples.Kinect.InteractionGallery.KinectBO
         public int idArtista { get; set; }
         public string claveAudio { get; set; }
         public string claveVideo { get; set; }
+        public string source { get; set; }
     
         public virtual album album { get; set; }
         public virtual artista artista { get; set; }

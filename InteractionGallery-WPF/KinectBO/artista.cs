@@ -16,15 +16,15 @@ namespace Microsoft.Samples.Kinect.InteractionGallery.KinectBO
     {
         public artista()
         {
-            this.canciones = new HashSet<canciones>();
             this.album = new HashSet<album>();
+            this.canciones = new HashSet<canciones>();
         }
     
         public int idArtista { get; set; }
         public string nombre { get; set; }
         public string picture { get; set; }
     
-        public virtual ICollection<canciones> canciones { get; set; }
         public virtual ICollection<album> album { get; set; }
+        public virtual ICollection<canciones> canciones { get; set; }
     }
 }
